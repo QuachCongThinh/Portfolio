@@ -500,7 +500,7 @@ header ul li a:hover::after {
         right: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 70px);
+        grid-template-rows: repeat(7, 70px);
         transform: translateX(100%);
         transition: 0.5s;
     }
@@ -530,7 +530,7 @@ header ul li a:hover::after {
 
     #container {
         grid-template-columns: 1fr;
-        padding: 0 5px;
+        padding: 0;
     }
 
     #container .content p {
@@ -541,7 +541,7 @@ header ul li a:hover::after {
 
     #container .content h1 {
         line-height: 40px;
-        font-size: 24px;
+        font-size: 20px;
     }
 
     #container .content h1 span{
