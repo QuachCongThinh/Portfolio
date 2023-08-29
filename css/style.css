@@ -188,42 +188,6 @@ header ul li a:hover::after {
     box-shadow: var(--box-shadow);
 }
 
-.gradientText {
-    display: inline-block;
-    background-image: var(--gradient-bg);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.job::before {
-    content: attr(job1);
-    overflow: hidden;
-    display: inline-flex;
-    animation:
-        animationText 1s linear infinite alternate,
-        changeText 4s linear infinite
-}
-
-@keyframes animationText {
-    from {
-        max-width: 0;
-    }
-
-    to {
-        max-width: 500px;
-    }
-}
-
-@keyframes changeText {
-    0% {
-        content: attr(job1);
-    }
-
-    100% {
-        content: attr(job2);
-    }
-}
-
 #container .avatar img {
     width: 70%;
     padding-top: 7 0px;
@@ -566,21 +530,23 @@ header ul li a:hover::after {
 
     #container {
         grid-template-columns: 1fr;
-    }
-
-    #container .content {
-        padding: 20px;
+        padding: 0;
     }
 
     #container .content p {
-        font-size: 19px;
+        font-size: 17px;
         font-weight: 400;
+        line-height: 10px;
     }
 
     #container .content h1 {
-        line-height: 35px;
-        font-size: 26px;
+        line-height: 40px;
+        font-size: 24px;
     }
+
+    #container .content h1 span{
+        font-size: 22px;
+    }    
 
     #container .buttonContact {
         width: 150px;
