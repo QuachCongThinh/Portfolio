@@ -1,7 +1,7 @@
-window.addEventListener('load', function(){
-    const loading = document.querySelector('.loader');
-    loading.classList.add('loader--hidden');
-    loading.addEventListener('transitionend', function(){
-        document.body.removeChild(loading);
-    });
-});
+var typed = new Typed(".text", {
+    strings: ["Front end Developer."],
+    typeSpeed: 60,
+    backSpeed: 60,
+    backDelay: 1000,
+    loop: true
+});         
