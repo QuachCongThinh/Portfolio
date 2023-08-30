@@ -83,6 +83,18 @@ header {
 header .logo img {
     height: 50px;
     margin: 0 0 0 20px;
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 
@@ -96,9 +108,12 @@ header ul {
 
 header ul li {
     font-weight: bold;
-    margin: 0 30px;
+    margin: 0 20px;
     position: relative;
     display: inline-block;
+}
+header .navDiv:nth-child(2){
+
 }
 
 header ul li a {
@@ -135,7 +150,7 @@ header ul li a:hover::after {
 }
 
 #container .content {
-    padding: 150px 20px 0 20px;
+    padding: 200px 20px 0 20px;
     text-align: center;
 }
 
@@ -218,7 +233,7 @@ header ul li a:hover::after {
     border-radius: 30px;
 }
 
-#intro .title {
+#career .title {
     text-align: center;
     padding: 30px 0 30px 0;
     font-weight: 700;
@@ -226,7 +241,7 @@ header ul li a:hover::after {
     font-weight: bolder;
 }
 
-#intro p {
+#career p {
     padding: 0 50px 0 50px;
     text-align: justify;
     text-align: center;
@@ -344,19 +359,16 @@ header ul li a:hover::after {
 }
 
 #contact .icon {
-    position: relative;
     padding: 20px 0 10px 0;
 }
 
 #contact .icon i {
-    color: #4070f4;
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
 }
 
 #contact .icon span {
-    position: relative;
     font-weight: bold;
     padding: 0 0 20px 0;
     display: flex;
@@ -385,7 +397,7 @@ header ul li a:hover::after {
         margin-top: -2px;
     }
 
-    #intro p {
+    #career p {
         padding: 0 40px 30px 40px;
         text-align: justify;
     }
@@ -541,11 +553,11 @@ header ul li a:hover::after {
 
     #container .content h1 {
         line-height: 40px;
-        font-size: 20px;
+        font-size: 23px;
     }
 
     #container .content h1 span{
-        font-size: 22px;
+        font-size: 23px;
     }    
 
     #container .buttonContact {
@@ -575,13 +587,13 @@ header ul li a:hover::after {
         padding: 0 25px 30px 25px;
     }
 
-    #intro p {
+    #career p {
         padding: 0 25px 30px 25px;
         text-align: justify;
         line-height: 30px;
     }
 
-    #intro .title {
+    #career .title {
         padding-bottom: 40px;
     }
 
