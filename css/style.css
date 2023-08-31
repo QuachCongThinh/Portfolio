@@ -600,8 +600,8 @@ header ul li a:hover::after {
         font-size: 17px;
         display: flex;
         justify-content: center;
-        margin-left: 45px;
         align-items: center;
+        margin: auto;
     }
 
     input#menu:checked~.navDiv {
