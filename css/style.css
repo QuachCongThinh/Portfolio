@@ -124,11 +124,6 @@ header ul li a{
         transform: translateY(0px);
     }
 }
-
-header ul li a {
-    color: var(--color-text);
-}
-
 header ul li a:hover {
     color: #00B4DB;
 }
@@ -207,55 +202,7 @@ header ul li a:hover::after {
     -webkit-text-fill-color: transparent;   
 }
 
-button{
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 50px;
-    border: 2px solid #0077ff;
-    border-radius: 15px;
-    justify-self: center;
-    font-size: 18px;
-    box-shadow: var(--box-shadow);
-    margin-top: -130px;
-    cursor: pointer;
-    z-index: 1; 
-    overflow: hidden;
-    animation: slideTop2 2s ease;
-}
-@keyframes slideTop2 {
-    0%{
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-button::before{
-    position: absolute;
-    content: '';
-    width: 200px;
-    height: 150px;
-    background-color: #0077ff;
-    border-radius: 50%;
-    z-index: -1;
-}
-button:before{
-    top: 100%;
-    left: 100%;
-    transition: .3s all;
-}
-button:hover::before{
-    top: -20px;
-    left: -25px;
-}
-button:hover{
-    color: white;
-}
-
-/* #container .buttonContact {
+#container .buttonContact {
     position: relative;
     display: inline-block;
     width: 150px;
@@ -309,7 +256,7 @@ button:hover{
 #container .buttonContact a:hover{
     position: absolute;
     color: white;
-} */
+}
 
 #container .avatar {
     position: relative;
@@ -456,10 +403,6 @@ button:hover{
     padding-top: 35px;
 }
 
-/* #certificate{
-
-} */
-
 #certificate .title {
     text-align: center;
     padding: 30px 0 30px 0;
@@ -467,10 +410,15 @@ button:hover{
     font-size: x-large;
     font-weight: bolder;
 }
-
-#certificate .img {
+#certificate .img{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 0 40px 30px 40px;
     border-bottom: var(--border);
-    padding: 50px;
+}
+#certificate .img img{
+    width: 100%;
 }
 
 #contact {
@@ -672,9 +620,9 @@ button:hover{
         font-size: 23px;
     }    
 
-    #container button{
-        margin-top: 30px;
-        margin-bottom: 40px;
+    #container .buttonContact{
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
 
     #container .avatar img {
@@ -706,6 +654,10 @@ button:hover{
     #target .title {
         padding-bottom: 40px;
     }
+    
+    #certificate .img{
+        grid-template-columns: 1fr;
+    }
 
     #contact .icon {
         line-height: 5px;
@@ -715,43 +667,3 @@ button:hover{
         padding-top: 3px;
     }
 }
-/* 
-.boxSkill {
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.boxSkill .box {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    background-color: #fff;
-    width: 220px;
-    height: 70px;
-    border-radius: 10px;
-    border: 1px solid #3c3e41;
-    box-shadow:
-        5px 5px 5px #e2e6ec,
-        -5px -5px 15px #ffffff;
-    transition: 0.5s;
-    position: relative;
-}
-
-.boxSkill .box:hover {
-    background-color: antiquewhite;
-    box-shadow: 0px 0px 2px #a2a6ac inset;
-}
-
-.boxSkill .box .icon {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.boxSkill .box span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-} */
