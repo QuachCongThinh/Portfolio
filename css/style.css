@@ -27,41 +27,6 @@ a {
     text-decoration: none;
 }
 
-.loader {
-    width: 100vw;
-    height: 100vh;
-    background-color: #dce1e4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 3s, visibility 3s;
-}
-
-.loader--hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.loader>div {
-    width: 60px;
-    height: 60px;
-    border: 10px solid #3c3e41;
-    border-radius: 50%;
-    border-top-color: #00B4DB;
-    animation: loading 0.8s linear infinite;
-}
-
-@keyframes loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
 header input,
 header .nav,
 header ul label {
@@ -202,9 +167,8 @@ header ul li a:hover::after {
     -webkit-text-fill-color: transparent;   
 }
 
-#container .buttonContact {
+#container .buttonContact{
     position: relative;
-    display: inline-block;
     width: 150px;
     height: 50px;
     border: 2px solid #0077ff;
@@ -250,12 +214,15 @@ header ul li a:hover::after {
 }
 #container .buttonContact a{
     position: absolute;
-    top: 26%;
-    left: 26%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s;
+    padding: 50px 150px;
 }
+
 #container .buttonContact a:hover{
-    position: absolute;
-    color: white;
+    color:white;
 }
 
 #container .avatar {
@@ -317,13 +284,12 @@ header ul li a:hover::after {
 
 #target p {
     padding: 0 50px 0 50px;
-    text-align: justify;
     text-align: center;
     line-height: 35px;
     font-size: 18px;
     font-weight: 400;
     border-bottom: var(--border);
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 #skill .title {
@@ -533,7 +499,7 @@ header ul li a:hover::after {
 
 
 /* mobile */
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
     header input {
         display: none;
     }
@@ -624,7 +590,6 @@ header ul li a:hover::after {
         margin-top: 40px;
         margin-bottom: 30px;
     }
-
     #container .avatar img {
         width: 75%;
         margin-top: 20px
