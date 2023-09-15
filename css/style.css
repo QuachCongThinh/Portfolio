@@ -27,13 +27,13 @@ a {
     text-decoration: none;
 }
 
-header input,
-header .nav,
-header ul label {
+#header input,
+#header .nav,
+#header ul label {
     display: none;
 }
 
-header {
+#header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -45,7 +45,7 @@ header {
     z-index: 2;
 }
 
-header .logo img {
+#header .logo img {
     height: 50px;
     margin: 0 0 0 20px;
     animation: slideLeft 1s ease forwards;
@@ -63,7 +63,7 @@ header .logo img {
 }
 
 
-header ul {
+#header ul {
     padding: 0;
     list-style: none;
     display: flex;
@@ -71,7 +71,7 @@ header ul {
     align-items: center;
 }
 
-header ul li a{
+#header ul li a{
     font-weight: bold;
     margin: 0 20px;
     position: relative;
@@ -89,22 +89,22 @@ header ul li a{
         transform: translateY(0px);
     }
 }
-header ul li a:hover {
+#header ul li a:hover {
     color: #00B4DB;
 }
 
-header ul li a::after {
+#header ul li a::after {
     content: '';
     position: absolute;
     width: 0;
+    left: 0;
     height: 2px;
     background: var(--gradient-bg);
-    left: 0;
     top: 23px;
     transition: 0.5s;
 }
 
-header ul li a:hover::after {
+#header ul li a:hover::after {
     width: 100%;
 }
 
@@ -357,7 +357,7 @@ header ul li a:hover::after {
 
 #project .listproject .item img {
     width: 70%;
-    height: 400px;
+    height: 300px;
     border-radius: 20px;
     transition: 0.3s;
 }
@@ -392,6 +392,11 @@ header ul li a:hover::after {
 #contact {
     padding-bottom: 20px;
 }
+#contact .info{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 90px;
+}
 
 #contact .title {
     text-align: center;
@@ -401,8 +406,8 @@ header ul li a:hover::after {
     font-weight: bolder;
 }
 
-#contact .icon {
-    padding: 20px 0 10px 0;
+#contact .icon{
+    padding: 0 30px;
 }
 
 #contact .icon i {
@@ -425,13 +430,13 @@ header ul li a:hover::after {
 /* khai bao responsive */
 /* desktop and laptop */
 @media screen and (max-width:1024px) {
-    header input,
-    header .nav,
-    header ul label {
+    #header input,
+    #header .nav,
+    #header ul label {
         display: none;
     }
 
-    header {
+    #header {
         margin-top: -2px;
     }
 
@@ -485,12 +490,7 @@ header ul li a:hover::after {
         transform: scale(1.05);
         transform-origin: bottom;
     }
-
-    #contact .icon li {
-        padding: 50px;
-    }
-
-    .listproject {
+    #project .listproject {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -500,26 +500,30 @@ header ul li a:hover::after {
         width: 100%;
         height: 200px;
     }
+
+    #contact .info{
+        margin: 0;
+    }
 }
 
 
 
 /* mobile */
 @media screen and (max-width:768px) {
-    header input {
+    #header input {
         display: none;
     }
 
-    header .logo img {
+    #header .logo img {
         margin: 0;
     }
 
-    header .nav {
+    #header .nav {
         display: flex;
         justify-content: end;
     }
 
-    header .nav label {
+    #header .nav label {
         width: 50px;
         height: 50px;
         display: flex;
@@ -530,10 +534,10 @@ header ul li a:hover::after {
         border-radius: 50%;
     }
 
-    header .navDiv {
+    #header .navDiv {
         position: fixed;
         background-color: #ecf0f1;
-        width: 60%;
+        width: 250px;
         opacity: 1;
         height: 100vh;
         z-index: 1;
@@ -546,7 +550,7 @@ header ul li a:hover::after {
         transition: 0.5s;
     }
 
-    header .navDiv li {
+    #header .navDiv li {
         font-size: 17px;
         display: flex;
         justify-content: center;
@@ -559,7 +563,7 @@ header ul li a:hover::after {
     }
 
 
-    header .navDiv label {
+    #header .navDiv label {
         width: 50px;
         height: 50px;
         box-shadow: var(--box-shadow);
@@ -634,11 +638,8 @@ header ul li a:hover::after {
         grid-template-columns: 1fr;
     }
 
-    #contact .icon {
-        line-height: 5px;
-    }
-
-    #contact .icon span {
-        padding-top: 3px;
+    #contact .info{
+        display: block;
+        margin-left: 0;
     }
 }
