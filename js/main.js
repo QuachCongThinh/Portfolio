@@ -5,7 +5,10 @@ var headerNav = document.querySelector('#header .navDiv');
 btnMenu.onclick = function(){
     var isOpen = headerNav.style.transform === 'translate(0%)';
     if (isOpen) {
-        
+        headerNav.style.transform = 'translateX(100%)';
+    }
+    else{
+        headerNav.style.transform = 'translateX(0%)'
     }
 }
 
