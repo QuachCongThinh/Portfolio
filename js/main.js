@@ -1,36 +1,28 @@
 //Auto/Hidden mobile menu
-var btnMenu = document.getElementById('mobile-menu');
-var headerNav = document.querySelector('#header .navDiv');
-var btnMenuItem = document.querySelector('#header .navDiv label');
+var openMenu = document.getElementById('mobile-menu');
+var menu = document.querySelector('#header .navDiv');
+var closeMenu = document.querySelector('#header .navDiv label');
 
-btnMenu.onclick = function(){
-    var isOpen = headerNav.style.transform === 'translate(0%)';
-    if (isOpen) {
-        headerNav.style.transform = 'translateX(100%)';
-    }
-    else{
-        headerNav.style.transform = 'translateX(0%)';
-    }
-}
 
-btnMenuItem.onclick = function(){
-    var isClose = headerNav.style.transform === 'translateX(100%)';
-    if(isClose){
-        headerNav.style.transform = 'translateX(0%)';
-    }
-    else{
-        headerNav.style.transform = 'translateX(100%)';
-    }
-}
 
+openMenu.onclick = function(){
+    menu.style.width = '60%';
+};
+
+closeMenu.onclick = function(){
+    menu.style.width = '0';
+};
 
 
 var menuItems = document.querySelectorAll('#header ul li a');
+var body = document.querySelector('body');
 for (var i = 0; i < menuItems.length; i++) {
     var menuItem = menuItems[i];
-    
+
     menuItem.onclick = function(){
-        headerNav.style.transform = 'translateX(100%)';
+        if(body.clientWidth <= 768){
+            menu.style.width = '0';
+        }
     }
 }
 
