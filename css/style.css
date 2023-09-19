@@ -385,7 +385,7 @@ a {
     justify-content: center;
 }
 #certificate .img img{
-    width: 40%;
+    width: 50%;
     padding: 0 40px 30px 40px;
 }
 
@@ -426,8 +426,8 @@ a {
 }
 
 /* khai bao responsive */
-/* desktop and laptop */
-@media screen and (max-width:1024px) {
+/* laptop */
+@media screen and (max-width: 1024px) {
     #header input,
     #header .nav,
     #header ul label {
@@ -495,7 +495,7 @@ a {
         padding-top: 10px;
     }
     #project .listproject .item img{
-        width: 100%;
+        width: 80%;
         height: 200px;
     }
 
@@ -525,7 +525,7 @@ a {
 
 
 
-/* mobile */
+/* tablet */
 @media screen and (max-width:768px) {
     #header input {
         display: none;
@@ -622,13 +622,13 @@ a {
         margin-bottom: 30px;
     }
     #container .avatar img {
-        width: 75%;
+        width: 50%;
         margin-top: 20px
     }
 
     #container .avatar::before {
         position: absolute;
-        width: 80%;
+        width: 50%;
         height: 75%;
     }
 
@@ -636,8 +636,8 @@ a {
         grid-template-columns: 1fr;
     }
     #project .listproject .item img{
-        width: 100%;
-        height: 200px;
+        width: 80%;
+        height: 300px;
     }
 
     #skill .listskill {
@@ -670,6 +670,21 @@ a {
     }
     #contact .info .icon{
         padding: 6px 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #container .avatar img{
+        width: 80%;
+    }
+    #container .avatar::before {
+        position: absolute;
+        width: 75%;
+        height: 75%;
+    }
+    #project .listproject .item img{
+        width: 100%;
+        height: 200px;
     }
 }
 

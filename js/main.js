@@ -6,7 +6,7 @@ var closeMenu = document.querySelector('#header .navDiv label');
 
 
 openMenu.onclick = function(){
-    menu.style.width = '60%';
+    menu.style.width = '50%';
 };
 
 closeMenu.onclick = function(){
