@@ -4,7 +4,6 @@ var menu = document.querySelector('#header .navDiv');
 var closeMenu = document.querySelector('#header .navDiv label');
 
 
-
 openMenu.onclick = function(){
     menu.style.width = '50%';
 };
@@ -16,12 +15,18 @@ closeMenu.onclick = function(){
 
 var menuItems = document.querySelectorAll('#header ul li a');
 var body = document.querySelector('body');
+
 for (var i = 0; i < menuItems.length; i++) {
     var menuItem = menuItems[i];
+    var currentWidth = body.clientWidth;
 
     menuItem.onclick = function(){
-        if(body.clientWidth <= 768){
+        if(currentWidth <= 767){
             menu.style.width = '0';
+        }
+        else(currentWidth > 767)
+        {
+            menu.style.width = null;
         }
     }
 }

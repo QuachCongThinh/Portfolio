@@ -526,7 +526,7 @@ a {
 
 
 /* tablet */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #header input {
         display: none;
     }
@@ -673,7 +673,7 @@ a {
     }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (max-width: 425px) {
     #container .avatar img{
         width: 80%;
     }
