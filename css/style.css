@@ -51,12 +51,14 @@ a {
     animation: slideLeft 1s ease forwards;
     opacity: 0;
 }
+
 @keyframes slideLeft {
-    0%{
+    0% {
         transform: translateX(-100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
@@ -71,7 +73,7 @@ a {
     align-items: center;
 }
 
-#header ul li a{
+#header ul li a {
     font-weight: bold;
     margin: 0 20px;
     position: relative;
@@ -79,16 +81,19 @@ a {
     animation: slideTop 1s ease forwards;
     opacity: 0;
 }
+
 @keyframes slideTop {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
 }
+
 #header ul li a:hover {
     color: #00B4DB;
 }
@@ -130,12 +135,14 @@ a {
     animation-delay: .3s;
     opacity: 0;
 }
+
 @keyframes slideBottom {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(-100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
@@ -150,24 +157,25 @@ a {
 }
 
 @keyframes slideTopp {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
-#container .content h1 span{
+#container .content h1 span {
     display: inline-block;
     background-image: var(--gradient-bg);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   
+    -webkit-text-fill-color: transparent;
 }
 
-#container .buttonContact{
+#container .buttonContact {
     position: relative;
     width: 150px;
     height: 50px;
@@ -178,20 +186,23 @@ a {
     box-shadow: var(--box-shadow);
     margin-top: -130px;
     cursor: pointer;
-    z-index: 1; 
+    z-index: 1;
     overflow: hidden;
     animation: slideTop2 2s ease;
-}       
+}
+
 @keyframes slideTop2 {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(100%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0%);
     }
 }
+
 #container .buttonContact::before {
     position: absolute;
     content: '';
@@ -212,7 +223,8 @@ a {
     top: -20px;
     left: -25px;
 }
-#container .buttonContact a{
+
+#container .buttonContact a {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -221,8 +233,8 @@ a {
     padding: 50px 150px;
 }
 
-#container .buttonContact a:hover{
-    color:white;
+#container .buttonContact a:hover {
+    color: white;
 }
 
 #container .avatar {
@@ -245,12 +257,14 @@ a {
     animation: rightleft 1s ease forwards;
     opacity: 0;
 }
+
 @keyframes rightleft {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
@@ -263,12 +277,14 @@ a {
     opacity: 0;
     animation: rightleft 1s ease forwards;
 }
+
 @keyframes rightleft {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
@@ -370,9 +386,13 @@ a {
     font-weight: bold;
     padding-top: 35px;
 }
-#certificate{
+
+#certificate {
     border-bottom: var(--border);
+    padding-bottom: 30px;
+    cursor: pointer;
 }
+
 #certificate .title {
     text-align: center;
     padding: 30px 0 30px 0;
@@ -380,19 +400,44 @@ a {
     font-size: x-large;
     font-weight: bolder;
 }
-#certificate .img{
+
+#certificate .list-certificate {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 0 30px 0 30px;
 }
-#certificate .img img{
-    width: 50%;
-    padding: 0 40px 30px 40px;
+
+#certificate .list-certificate .item {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px 10px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+#certificate .list-certificate .item:hover {
+    transform: translateY(-5px);
+}
+#certificate .list-certificate .item i {
+    font-size: 24px;
+    transform: all 0.3s ease;
+}
+#certificate .list-certificate .item:hover > i{
+    color: #2eca36;
+}
+#certificate .list-certificate .item p {
+    margin-top: 5px;
+    line-height: 20px;
 }
 
 #contact {
     padding-bottom: 20px;
 }
-#contact .info{
+
+#contact .info {
     display: flex;
     justify-content: center;
     margin: 20px 0 0 90px;
@@ -406,7 +451,7 @@ a {
     font-weight: bolder;
 }
 
-#contact .icon{
+#contact .icon {
     padding: 0 30px;
 }
 
@@ -428,6 +473,7 @@ a {
 /* khai bao responsive */
 /* laptop */
 @media screen and (max-width: 1024px) {
+
     #header input,
     #header .nav,
     #header ul label {
@@ -488,37 +534,29 @@ a {
         transform: scale(1.05);
         transform-origin: bottom;
     }
+
     #project .listproject {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding-top: 10px;
     }
-    #project .listproject .item img{
+
+    #project .listproject .item img {
         width: 80%;
         height: 200px;
     }
 
-    #certificate{
-        padding: 0 40px 30px 40px;
-    }
-    #certificate img{
-        display: flex;
-        justify-content: center;
-    }
-    #certificate .img img{
-        width: 50%;
-        padding: 0 20px 20px 20px;
-    }
-
-    #contact .info{
+    #contact .info {
         margin: 0;
     }
-    #contact .info{
+
+    #contact .info {
         padding: 5px;
         display: block;
     }
-    #contact .info .icon{
+
+    #contact .info .icon {
         padding: 10px;
     }
 }
@@ -526,7 +564,7 @@ a {
 
 
 /* tablet */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     #header input {
         display: none;
     }
@@ -579,7 +617,8 @@ a {
         align-items: center;
         margin: auto;
     }
-    #header .navDiv li a{
+
+    #header .navDiv li a {
         display: block;
     }
 
@@ -613,14 +652,15 @@ a {
         font-size: 23px;
     }
 
-    #container .content h1 span{
+    #container .content h1 span {
         font-size: 23px;
-    }    
+    }
 
-    #container .buttonContact{
+    #container .buttonContact {
         margin-top: 40px;
         margin-bottom: 30px;
     }
+
     #container .avatar img {
         width: 70%;
         margin-top: 20px
@@ -635,8 +675,9 @@ a {
     #project .listproject {
         grid-template-columns: 1fr;
     }
-    #project .listproject .item img{
-        width: 80%;
+
+    #project .listproject .item img {
+        width: 70%;
         height: 300px;
     }
 
@@ -654,37 +695,31 @@ a {
     #target .title {
         padding-bottom: 40px;
     }
-    
-    #certificate .img{
-        display: block;
-    }
-    #certificate .img img{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+
+    #certificate .list-certificate{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: 10px;
     }
 
-    #contact .info{
+    #contact .info {
         display: block;
         margin-left: 0;
     }
-    #contact .info .icon{
+
+    #contact .info .icon {
         padding: 6px 0;
     }
 }
 
-@media screen and (max-width: 425px) {
-    #container .avatar img{
-        width: 80%;
-    }
-    #container .avatar::before {
-        position: absolute;
-        width: 75%;
-        height: 75%;
-    }
+/* mobile */
+@media screen and (max-width: 424px) {
     #project .listproject .item img{
         width: 100%;
         height: 200px;
     }
+    #certificate .list-certificate{
+        grid-template-columns: 1fr;
+        margin-right: 5px;
+     }
 }
-
