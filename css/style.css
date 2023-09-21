@@ -713,13 +713,19 @@ a {
 }
 
 /* mobile */
-@media screen and (min-width:320px) and (max-width: 424px) {
+@media screen and (min-width:320px) and (max-width:428px) {
     #project .listproject .item img{
-        width: 100%;
+        width: 80%;
         height: 150px;
     }
     #certificate .list-certificate{
         grid-template-columns: 1fr;
         margin-right: 5px;
      }
+}
+@media screen and (max-width:320px){
+    #project .listproject .item img{
+        width: 100%;
+        height: 150px;
+    }
 }
