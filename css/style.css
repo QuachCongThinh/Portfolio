@@ -372,7 +372,7 @@ a {
 }
 
 #project .listproject .item img {
-    width: 60%;
+    width: 70%;
     height: 300px;
     border-radius: 20px;
     transition: 0.3s;
@@ -713,10 +713,10 @@ a {
 }
 
 /* mobile */
-@media screen and (max-width: 424px) {
+@media screen and (min-width:320px) and (max-width: 424px) {
     #project .listproject .item img{
         width: 100%;
-        height: 200px;
+        height: 150px;
     }
     #certificate .list-certificate{
         grid-template-columns: 1fr;
