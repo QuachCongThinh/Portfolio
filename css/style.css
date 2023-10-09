@@ -19,7 +19,7 @@
 html {
     scroll-behavior: smooth;
     font-family: 'Montserrat';
-    background-color: #ecf0f1;
+    background-color: #ecf0f1;      
 }
 
 a {
@@ -93,11 +93,9 @@ a {
         transform: translateY(0px);
     }
 }
-
 #header ul li a:hover {
     color: #00B4DB;
 }
-
 #header ul li a::after {
     content: '';
     position: absolute;
@@ -108,7 +106,6 @@ a {
     top: 23px;
     transition: 0.5s;
 }
-
 #header ul li a:hover::after {
     width: 100%;
 }
@@ -372,14 +369,9 @@ a {
 }
 
 #project .listproject .item img {
-    width: 70%;
-    height: 300px;
+    width: 50%;
+    height: 200px;
     border-radius: 20px;
-    transition: 0.3s;
-}
-
-#project .listproject .item img:hover {
-    transform: scale(1.1);
 }
 
 #project .listproject .item .name {
@@ -715,7 +707,7 @@ a {
 /* mobile */
 @media screen and (min-width:320px) and (max-width:428px) {
     #project .listproject .item img{
-        width: 80%;
+        width: 90%;
         height: 150px;
     }
     #certificate .list-certificate{
@@ -724,6 +716,9 @@ a {
      }
 }
 @media screen and (max-width:320px){
+    #header .navDiv li a{
+        font-size: 14px;
+    }
     #project .listproject .item img{
         width: 100%;
         height: 150px;

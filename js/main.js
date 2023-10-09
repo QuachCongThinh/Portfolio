@@ -1,13 +1,13 @@
-//Auto/Hidden mobile menu
+//Hidden mobile menu
 var openMenu = document.getElementById('mobile-menu');
 var menu = document.querySelector('#header .navDiv');
 var closeMenu = document.querySelector('#header .navDiv label');
 
-
+//Click the button open the menu
 openMenu.onclick = function(){
     menu.style.width = '50%';
 };
-
+//Click the button close the menu
 closeMenu.onclick = function(){
     menu.style.width = '0';
 };
@@ -21,7 +21,7 @@ for (var i = 0; i < menuItems.length; i++) {
     var currentWidth = body.clientWidth;
 
     menuItem.onclick = function(){
-        if(currentWidth <= 767){
+        if(currentWidth <= 768){
             menu.style.width = '0';
         }
         else(currentWidth > 767)
