@@ -17,6 +17,7 @@
 }
 
 html {
+    scroll-padding-top: 70px;
     scroll-behavior: smooth;
     font-family: 'Montserrat';
     background-color: #ecf0f1;      
